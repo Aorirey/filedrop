@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
-import { Outfit, Sora } from "next/font/google";
+import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 
-const sora = Sora({
+const inter = Inter({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-sora",
-  display: "swap",
-});
-
-const outfit = Outfit({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-outfit",
+  variable: "--font-inter",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
@@ -27,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${sora.variable} ${outfit.variable}`}>{children}</body>
+      <body className={inter.variable}>{children}</body>
     </html>
   );
 }

@@ -17,8 +17,10 @@ export function QrPanel({
 }) {
   return (
     <section className={`glass hero-panel${waiting ? " waiting" : ""}`}>
-      <p className="hero-kicker">Получатель</p>
-      <h1 className="hero-title">Отсканируйте QR</h1>
+      <div className="hero-title-wrap">
+        <h1 className="hero-title">Хотите отправить файлы?</h1>
+        <p className="hero-kicker">Отсканируйте QR-код, чтобы подключиться</p>
+      </div>
       <div className="qr-wrap">
         {url ? (
           <QRCodeSVG
@@ -26,7 +28,7 @@ export function QrPanel({
             size={220}
             level="M"
             bgColor="transparent"
-            fgColor="#0a1218"
+            fgColor="#080808"
             marginSize={0}
           />
         ) : (

@@ -126,7 +126,7 @@ export default function SenderPage() {
       <section className="glass sender-stage">
         <h1>Отправка файлов</h1>
         <p className="lead">
-          Комната <strong style={{ color: "var(--teal)", letterSpacing: "0.12em" }}>{roomId}</strong>
+          Комната <strong style={{ color: "var(--blue-violet)", letterSpacing: "0.12em" }}>{roomId}</strong>
           {" · "}
           {statusLabel(status, joinError)}
         </p>
