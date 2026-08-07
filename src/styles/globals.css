@@ -10,8 +10,8 @@
   --black-bg: #0d0d0e;
   --danger: #ff7b7b;
   --radius: 2rem;
-  --font-body: var(--font-inter), Inter, system-ui, sans-serif;
-  --font-display: var(--font-inter), Inter, system-ui, sans-serif;
+  --font-body: var(--font-yulong), Yulong, system-ui, sans-serif;
+  --font-display: var(--font-yulong), Yulong, system-ui, sans-serif;
 }
 
 *,

@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "@/styles/globals.css";
 
-const inter = Inter({
-  subsets: ["latin", "latin-ext"],
-  variable: "--font-inter",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+const yulong = localFont({
+  src: [
+    {
+      path: "../../fonts/Yulong-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../fonts/Yulong-Regular.woff",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-yulong",
   display: "swap",
 });
 
@@ -22,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={inter.variable}>{children}</body>
+      <body className={yulong.variable}>{children}</body>
     </html>
   );
 }
