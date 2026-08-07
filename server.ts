@@ -54,6 +54,12 @@ function cleanupSocket(socket: Socket, io: SocketIOServer) {
 app.prepare().then(() => {
   const httpServer = createServer((req, res) => {
     const parsedUrl = parse(req.url || "/", true);
+    const isHtml = /\.(?:html?)$/i.test(parsedUrl.pathname || "");
+    if (isHtml || parsedUrl.pathname === "/") {
+      res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+      res.setHeader("Pragma", "no-cache");
+      res.setHeader("Expires", "0");
+    }
     handle(req, res, parsedUrl);
   });
 
