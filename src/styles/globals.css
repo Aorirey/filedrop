@@ -152,9 +152,12 @@ input {
   );
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(22px) saturate(140%);
-  -webkit-backdrop-filter: blur(22px) saturate(140%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.04),
+    var(--shadow);
+  backdrop-filter: blur(26px) saturate(160%);
+  -webkit-backdrop-filter: blur(26px) saturate(160%);
 }
 
 .glass-inset {
@@ -216,12 +219,9 @@ input {
   margin: 0 auto;
 }
 
-@media (min-width: 900px) {
-  .main-stage.split {
-    grid-template-columns: 1.1fr 0.9fr;
-    align-items: stretch;
-    place-items: stretch;
-  }
+.main-stage.centered {
+  grid-template-rows: auto auto;
+  place-items: center;
 }
 
 .hero-panel {
@@ -254,12 +254,15 @@ input {
 .qr-wrap {
   display: grid;
   place-items: center;
-  margin: 0 auto 18px;
+  margin: 0 auto 24px;
   padding: 18px;
   width: fit-content;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+    0 0 0 6px rgba(61, 207, 182, 0.12),
+    0 0 40px rgba(61, 207, 182, 0.28);
 }
 
 .room-code {

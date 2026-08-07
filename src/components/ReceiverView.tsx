@@ -117,7 +117,7 @@ export function ReceiverView() {
 
   return (
     <GlassShell>
-      <div className="main-stage split">
+      <div className="main-stage centered">
         <QrPanel
           url={sendUrl}
           roomId={roomId}
